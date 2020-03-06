@@ -9,9 +9,9 @@
   <meta name="description" content="EJS ? Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다. ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.">
 
   
-  <link rel="stylesheet" href="/assets/styles/core.css?v=20200306114537">
-  <link rel="stylesheet" href="/assets/styles/fontello.css?v=20200306114537">
-  <link rel="stylesheet" href="/assets/styles/highlighting/default.css?v=20200306114537">
+  <link rel="stylesheet" href="/assets/styles/core.css?v=20200306120208">
+  <link rel="stylesheet" href="/assets/styles/fontello.css?v=20200306120208">
+  <link rel="stylesheet" href="/assets/styles/highlighting/default.css?v=20200306120208">
 
   <link rel="canonical" href="http://localhost:4000/2020/03/06/ejs-01.html">
   <link rel="alternate" type="application/rss+xml" title="SPOONSPOONSPOON blog" href="/feed.xml">
@@ -45,7 +45,7 @@
 
   <div class="post-content" itemprop="articleBody">
     <h1 id="ejs-">EJS ?</h1>
-<p>Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다.
+<p>Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다.<br />
 ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.</p>
 
 <h2 id="환경설정-ejs-epxress-설치">환경설정 (ejs, epxress 설치)</h2>
@@ -62,9 +62,8 @@ $ npm i ejs
 </ol>
 
 <h2 id="코드-작성해보기">코드 작성해보기</h2>
-<p>app.js와 page.js에 다음과 같이 작성한다.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// app.js</span>
-<span class="kd">let</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span> <span class="c1">//사용할 모듈 요청</span>
+<p>app.js</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span> <span class="c1">//사용할 모듈 요청</span>
 <span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span> <span class="c1">// app에 express 저장</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">view engine</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">ejs</span><span class="dl">'</span><span class="p">);</span>
@@ -75,8 +74,21 @@ $ npm i ejs
 <span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
 	<span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="dl">'</span><span class="s1">page</span><span class="dl">'</span><span class="p">,{});</span> <span class="c1">// res.render('page') 실행.</span>
 <span class="p">});</span>
-
 </code></pre></div></div>
+<ul>
+  <li>app.set
+    <ul>
+      <li><code class="highlighter-rouge">view engine</code> view engine을 ejs 파일로 사용하는것을 정의.</li>
+      <li><code class="highlighter-rouge">views</code> view 경로 설정. express는 템플릿 기본 경로가 views이므로 이를 그대로 따른다면 별도로 정의하지 않아도 무방함.</li>
+    </ul>
+  </li>
+  <li>app.get
+    <ul>
+      <li><code class="highlighter-rouge">get()</code>은 주소창에 입력 받았을 때 실행할 사항들을 나타내는 라우트 함수이다.</li>
+      <li><code class="highlighter-rouge">/</code> 주소창에 get방식으로 (/패스로) 진입했을 때 처리할 내용을 정의한다.</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
