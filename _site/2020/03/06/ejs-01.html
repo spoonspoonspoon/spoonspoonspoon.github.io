@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>[study] ejs 알아보기 - SPOONSPOONSPOON blog</title>
+  <meta name="description" content="EJS ? Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다. ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.">
+
+  
+  <link rel="stylesheet" href="/assets/styles/core.css?v=20200306114537">
+  <link rel="stylesheet" href="/assets/styles/fontello.css?v=20200306114537">
+  <link rel="stylesheet" href="/assets/styles/highlighting/default.css?v=20200306114537">
+
+  <link rel="canonical" href="http://localhost:4000/2020/03/06/ejs-01.html">
+  <link rel="alternate" type="application/rss+xml" title="SPOONSPOONSPOON blog" href="/feed.xml">
+
+  
+
+  
+</head>
+
+  <body>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post" lang="en" itemscope itemtype="http://schema.org/BlogPosting" >
+
+  <header class="post-header">
+  <a class="site-title" href="/">SPOONSPOONSPOON blog</a>
+  <h1 class="post-title baseline-fix" itemprop="name headline">[study] ejs 알아보기</h1>
+</header>
+
+
+<div class="post-cover" aria-label="Cover">
+  <div class="post-cover-wrapper">
+    <img src="/../../../../../images/cover/cover_ejs.png" alt="" />
+  </div>
+  <div class="cover-meta">
+</div>
+</div>
+
+
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="ejs-">EJS ?</h1>
+<p>Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다.
+ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.</p>
+
+<h2 id="환경설정-ejs-epxress-설치">환경설정 (ejs, epxress 설치)</h2>
+<pre><code class="language-PowerShell">$ npm i epxress
+$ npm i ejs
+</code></pre>
+
+<h2 id="파일-구조-생성하기">파일 구조 생성하기</h2>
+<ol>
+  <li>node_modules 폴더와 동일한 뎁스(프로젝트 폴더 최상위)에 app.js(기능이 처리될 파일) 생성.</li>
+  <li>views폴더 생성(템플릿 파일들이 들어갈 폴더)</li>
+  <li>views 폴더 내에 테스트용 page.ejs 생성</li>
+  <li>include 할 ejs 파일도 마찬가지로 views 폴더 내 생성 (예제에선 templates/foo.ejs로 생성)</li>
+</ol>
+
+<h2 id="코드-작성해보기">코드 작성해보기</h2>
+<p>app.js와 page.js에 다음과 같이 작성한다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// app.js</span>
+<span class="kd">let</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span> <span class="c1">//사용할 모듈 요청</span>
+<span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span> <span class="c1">// app에 express 저장</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">view engine</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">ejs</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">'</span><span class="s1">views</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">./views</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kd">static</span><span class="p">(</span><span class="nx">__dirname</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">));</span> <span class="c1">// 기본 path 지정. __dirname은 최상위 경로를 일컫는다.</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+	<span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="dl">'</span><span class="s1">page</span><span class="dl">'</span><span class="p">,{});</span> <span class="c1">// res.render('page') 실행.</span>
+<span class="p">});</span>
+
+</code></pre></div></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <div class="post-meta">
+       <time datetime="2020-03-06T00:00:00+09:00" itemprop="datePublished">Mar 6, 2020</time> 
+      
+    </div>
+
+    
+    <ul class="post-tags" aria-label="TagList">
+      
+      <li><a class="tag-link" href="/tags/ejs">ejs</a></li>
+      
+    </ul>
+    
+
+    <div class="post-footer-link">
+      <a class="list-page-link" href="/">🔙목록으로 이동</a>
+    </div>
+  </footer>
+
+  
+</article>
+
+    </div>
+    <script type="text/javascript">
+  (function () {
+    var resize = function () {
+      this.width = 0.5 * (this.naturalWidth || this.width);
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".half-size, .retina2x"), function(el) {
+      if (el.naturalWidth) {
+        resize.call(el);
+      } else {
+        el.onload = resize;
+      }
+    });
+  })();
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+
+  <div class="wrapper">
+    <div class="social-links">
+      <a class="social-link social-github" href="https://github.com/spoonspoonspoon">
+        <i class="icon-github"></i>
+      </a>
+    </div>
+    <div class="credits">
+      <a href="spoonspoonspoon.github.io">Technical learning for the web, spoonspoonspoon.github.io</a>
+    </div>
+  </div>
+
+</footer>
+
+
+  <script>
+  (function(elements) {
+    var elements = Array.prototype.slice.call(document.getElementsByClassName('baseline-fix'));
+    for (var i = 0; i != elements.length; i++) {
+      var el = elements[i];
+      el.innerHTML = el.innerHTML.replace(/[\u2000-\u206e⸀-\u2e7e⺀-\u2efe⼀-\u2fde⿰-\u2ffe\u3000-〾\u3040-ゞ゠-ヾ\u3100-\u312e\u3130-ㆎ㆐-㆞ㆠ-\u31be㇀-\u31eeㇰ-ㇾ㈀-㋾㌀-㏾㐀-\u4dbe一-\u9ffe\ua960-\ua97e가-\ud7ae\ud7b0-\ud7fe豈-\ufafe︰-﹎\uff00-￮]|[\ud840-\ud868\ud86a-\ud86c][\udc00-\udfff]|\ud82c[\udc00-\udcfe]|\ud869[\udc00-\udede\udf00-\udfff]|\ud86d[\udc00-\udf3e\udf40-\udfff]|\ud86e[\udc00-\udc1e]|\ud87e[\udc00-\ude1e]/g, function (ch) {
+        return '<span class="baseline-fix-block">' + ch + '<' + '/span>';
+      });
+      el.classList.remove('baseline-fix');
+    }
+  })(Array.prototype.slice.call(document.getElementsByClassName('baseline-fix')));
+</script>
+
+
+</body>
+
+</html>

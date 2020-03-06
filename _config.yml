@@ -59,3 +59,4 @@ defaults:
     values:
       layout: post
       tag: ""
+      cover_url: ""
