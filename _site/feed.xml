@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-06T12:02:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SPOONSPOONSPOON blog</title><subtitle>repository for learning</subtitle><entry><title type="html">[study] ejs 알아보기</title><link href="http://localhost:4000/2020/03/06/ejs-01.html" rel="alternate" type="text/html" title="[study] ejs 알아보기" /><published>2020-03-06T00:00:00+09:00</published><updated>2020-03-06T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/06/ejs-01</id><content type="html" xml:base="http://localhost:4000/2020/03/06/ejs-01.html">&lt;h1 id=&quot;ejs-&quot;&gt;EJS ?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-06T19:00:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">SPOONSPOONSPOON blog</title><subtitle>repository for learning</subtitle><entry><title type="html">[study] ejs 알아보기</title><link href="http://localhost:4000/2020/03/06/ejs-01.html" rel="alternate" type="text/html" title="[study] ejs 알아보기" /><published>2020-03-06T00:00:00+09:00</published><updated>2020-03-06T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/06/ejs-01</id><content type="html" xml:base="http://localhost:4000/2020/03/06/ejs-01.html">&lt;h1 id=&quot;ejs-&quot;&gt;EJS ?&lt;/h1&gt;
 &lt;p&gt;Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다.&lt;br /&gt;
 ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.&lt;/p&gt;
 
@@ -42,10 +42,87 @@ $ npm i ejs
       &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; 주소창에 get방식으로 (/패스로) 진입했을 때 처리할 내용을 정의한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="ejs" /><summary type="html">EJS ? Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다. ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.</summary></entry><entry><title type="html">test영어사이에abcd한글이sdflkdsjflkd들어간다면,,,</title><link href="http://localhost:4000/2020/03/04/posttest.html" rel="alternate" type="text/html" title="test영어사이에abcd한글이sdflkdsjflkd들어간다면,,," /><published>2020-03-04T00:00:00+09:00</published><updated>2020-03-04T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/04/posttest</id><content type="html" xml:base="http://localhost:4000/2020/03/04/posttest.html">&lt;p&gt;&lt;img src=&quot;../../../../images/@tmp.png&quot; alt=&quot;st&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="ejs" /><summary type="html">EJS ? Embedded JavaScript의 약자로 동적인 웹사이트를 만들기 위해 사용되는 HTML 템플릿 엔진 모듈을 말한다. ejs는 html, js 문법을 그대로 사용하기 때문에 코드 파악이 쉽고, 서버로부터 데이터를 넘기거나 가져올 수 있다.</summary></entry><entry><title type="html">[study] vue 알아보기 - 시작 전, 설치하기</title><link href="http://localhost:4000/2020/03/06/vue-01.html" rel="alternate" type="text/html" title="[study] vue 알아보기 - 시작 전, 설치하기" /><published>2020-03-06T00:00:00+09:00</published><updated>2020-03-06T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/06/vue-01</id><content type="html" xml:base="http://localhost:4000/2020/03/06/vue-01.html">&lt;h3 id=&quot;vue-devtools&quot;&gt;Vue Devtools&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;브라우저에 &lt;a href=&quot;https://github.com/vuejs/vue-devtools#vue-devtools&quot; target=&quot;_blank&quot;&gt;Vue Devtools&lt;/a&gt; 확장프로그램을 설치하면 편하게 Vue앱을 디버깅할 수 있다.&lt;/li&gt;
+  &lt;li&gt;콘솔에 나타나지 않거나 확장프로그램이 active 되지 않을 경우
+    &lt;ul&gt;
+      &lt;li&gt;크롬 우측 상단 vue.devtools 아이콘 우클릭 ⇒ 확장 프로그램 관리 ⇒ 파일 url에 대한 액세스 허용 활성화 (&lt;a href=&quot;https://github.com/vuejs/vue-devtools/issues/268&quot; target=&quot;_blank&quot;&gt;참고&lt;/a&gt;)&lt;/li&gt;
+      &lt;li&gt;혹은 상용버전(production) cdn으로 연결한 경우에도 안됨&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vscode-extensions&quot;&gt;vscode extensions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vetur ⇒ 코드 자동 완성, 디버깅 등을 지원.
+    &lt;ul&gt;
+      &lt;li&gt;vue 파일에서 scaffold를 입력하면 template 태그, script 태그, style 태그를 기본적으로 만들어줌&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vue 2 Snippets ⇒ Vetur에서 부족한 기능 보완.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vue-추가하기&quot;&gt;Vue 추가하기&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;직접 추가 (우클릭 - 저장)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://kr.vuejs.org/js/vue.js&quot;&gt;개발버전 (콘솔 오류 메시지 반환 및 디버그 모드)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://kr.vuejs.org/js/vue.min.js&quot;&gt;상용버전(속도 및 용량 최적화 버전)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cdn
+    &lt;ul&gt;
+      &lt;li&gt;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;npm
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install vue&lt;/code&gt; 최신 안정화 버전&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;용어-정리-필요한것만-httpskrvuejsorg에서-발췌&quot;&gt;용어 정리 (필요한것만 &lt;a href=&quot;https://kr.vuejs.org/&quot; target=&quot;_blank&quot;&gt;https://kr.vuejs.org/&lt;/a&gt;에서 발췌)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Full : 컴파일러 및 런타임 버전 포함&lt;/li&gt;
+  &lt;li&gt;Compiler: 템플릿 문자열을 Javascript 렌더링 함수로 컴파일하는 코드&lt;/li&gt;
+  &lt;li&gt;Runtime: Vue 인스턴스 생성, 가상 DOM 렌더링 및 업데이트 등을 담당하는 코드. (모든 컴파일러 제외한 것)&lt;/li&gt;
+  &lt;li&gt;UMD : UMD 빌드는 &lt;script&gt; 태그를 통해 브라우저에서 직접 사용 가능하다.
+http://unpkg.com/vue 의 CDN&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;CommonJS : Commonjs 빌드는 browserify 또는 webpack 1과 같은 이전 번들과 함께 사용하기 위한것.&lt;/li&gt;
+  &lt;li&gt;엘리먼트와 연결되는 new Veu({}) ?? « 이것을 Vue 인스턴스라고 한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;런타임컴파일러와-런타임의-차이&quot;&gt;런타임+컴파일러와 런타임의 차이&lt;/h3&gt;
+
+&lt;p&gt;템플릿을 실시간으로 컴파일 해야하는 경우 (예: 문자열을 template 옵션에 전달하거나 템플릿으로 in-DOM HTML을 사용하여 요소에 마운트하는 경우) 컴파일러와 전체 빌드가 필요&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 아래 내용은 컴파일러가 필요합니다
+new Vue({
+	template: '&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;'
+})
+
+// 아래는 필요하지 않습니다.
+new Vue({
+	render (h) {
+		return h('div', this.hi)
+	}
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;vue-loader 또는 vueify를 사용할 때 *.vue 파일의 템플릿은 빌드시 JavaScript로 미리 컴파일 된다. 최종 번들에는 실제로 컴파일러가 필요하지 않으므로 런타임 전용 빌드를 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;런타임 전용 빌드는 전체 빌드보다 약 30% 정도 가벼우므로 언제든지 사용 가능.&lt;/p&gt;
+
+&lt;p&gt;하지만 전체 빌드를 사용하려면 번들러에서 별칭을 구성해야한다.&lt;/p&gt;
+
+&lt;p&gt;ref.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kr.vuejs.org/v2/guide/installation.html&quot;&gt;https://kr.vuejs.org/v2/guide/installation.html&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="vue" /><summary type="html">Vue Devtools 브라우저에 Vue Devtools 확장프로그램을 설치하면 편하게 Vue앱을 디버깅할 수 있다. 콘솔에 나타나지 않거나 확장프로그램이 active 되지 않을 경우 크롬 우측 상단 vue.devtools 아이콘 우클릭 ⇒ 확장 프로그램 관리 ⇒ 파일 url에 대한 액세스 허용 활성화 (참고) 혹은 상용버전(production) cdn으로 연결한 경우에도 안됨</summary></entry><entry><title type="html">test영어사이에abcd한글이sdflkdsjflkd들어간다면,,,</title><link href="http://localhost:4000/2020/03/04/posttest.html" rel="alternate" type="text/html" title="test영어사이에abcd한글이sdflkdsjflkd들어간다면,,," /><published>2020-03-04T00:00:00+09:00</published><updated>2020-03-04T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/04/posttest</id><content type="html" xml:base="http://localhost:4000/2020/03/04/posttest.html">&lt;p&gt;&lt;img src=&quot;../../../images/@tmp.png&quot; alt=&quot;st&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;아……..
-왜 날아갔지…?&lt;/p&gt;</content><author><name></name></author><category term="test" /><summary type="html"></summary></entry><entry><title type="html">아,,,,,,태그 테스트를 해봅시다..</title><link href="http://localhost:4000/2020/03/04/tag_test.html" rel="alternate" type="text/html" title="아,,,,,,태그 테스트를 해봅시다.." /><published>2020-03-04T00:00:00+09:00</published><updated>2020-03-04T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/04/tag_test</id><content type="html" xml:base="http://localhost:4000/2020/03/04/tag_test.html">&lt;p&gt;제발..&lt;/p&gt;</content><author><name></name></author><category term="test" /><summary type="html">제발..</summary></entry><entry><title type="html">테스트 하나 더..</title><link href="http://localhost:4000/2020/03/04/testpost2.html" rel="alternate" type="text/html" title="테스트 하나 더.." /><published>2020-03-04T00:00:00+09:00</published><updated>2020-03-04T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/04/testpost2</id><content type="html" xml:base="http://localhost:4000/2020/03/04/testpost2.html">&lt;p&gt;&lt;img src=&quot;../../../../images/@tmp2.png&quot; alt=&quot;st&quot; /&gt;&lt;/p&gt;
+왜 날아갔지…?&lt;/p&gt;</content><author><name></name></author><category term="test" /><summary type="html"></summary></entry><entry><title type="html">아,,,,,,태그 테스트를 해봅시다..</title><link href="http://localhost:4000/2020/03/04/tag_test.html" rel="alternate" type="text/html" title="아,,,,,,태그 테스트를 해봅시다.." /><published>2020-03-04T00:00:00+09:00</published><updated>2020-03-04T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/04/tag_test</id><content type="html" xml:base="http://localhost:4000/2020/03/04/tag_test.html">&lt;p&gt;제발..&lt;/p&gt;</content><author><name></name></author><category term="test" /><summary type="html">제발..</summary></entry><entry><title type="html">테스트 하나 더..</title><link href="http://localhost:4000/2020/03/04/testpost2.html" rel="alternate" type="text/html" title="테스트 하나 더.." /><published>2020-03-04T00:00:00+09:00</published><updated>2020-03-04T00:00:00+09:00</updated><id>http://localhost:4000/2020/03/04/testpost2</id><content type="html" xml:base="http://localhost:4000/2020/03/04/testpost2.html">&lt;p&gt;&lt;img src=&quot;../../../images/@tmp2.png&quot; alt=&quot;st&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;가나다라마바사&lt;br /&gt;
 파일수정보기방문기록&lt;br /&gt;
